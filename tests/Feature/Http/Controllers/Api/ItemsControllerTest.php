@@ -35,7 +35,7 @@ class ItemsControllerTest extends TestCase
 
         $response->assertStatus(200)
             ->assertJson([
-                'total' => $this->product->item_total,
+                'gross_total' => $this->product->item_total,
             ])->assertJsonIsObject();
         $this->assertDatabaseHas('cart_product', [
             'cart_id' => $response->json('id'),
@@ -50,7 +50,7 @@ class ItemsControllerTest extends TestCase
 
         $response->assertStatus(200)
             ->assertJson([
-                'total' => $this->product->item_total * 2,
+                'gross_total' => $this->product->item_total * 2,
             ])->assertJsonIsObject();
         $this->assertDatabaseHas('cart_product', [
             'cart_id' => $response->json('id'),
@@ -77,7 +77,7 @@ class ItemsControllerTest extends TestCase
 
         $response->assertStatus(200)
             ->assertJson([
-                'total' => $this->product->item_total * $quantity,
+                'gross_total' => $this->product->item_total * $quantity,
             ])->assertJsonIsObject();
         $this->assertDatabaseHas('cart_product', [
             'cart_id' => $response->json('id'),

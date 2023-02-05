@@ -18,7 +18,7 @@ class CartControllerTest extends TestCase
         'id',
         'updated_at',
         'created_at',
-        'total',
+        'gross_total',
         'products'
     ];
 

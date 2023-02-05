@@ -1,0 +1,19 @@
+.Header {
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 1rem;
+}
+
+.Header > button {
+    color: var(--white);
+}
+
+.Header a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+.Header a:hover {
+    text-decoration: underline;
+}

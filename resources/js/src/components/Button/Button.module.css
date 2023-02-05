@@ -1,0 +1,14 @@
+.Button {
+    border: none;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    transition: all .15s;
+}
+
+.Button:hover {
+    filter: brightness(var(--color-darker));
+}

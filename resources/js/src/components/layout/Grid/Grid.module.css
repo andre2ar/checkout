@@ -1,0 +1,27 @@
+.Grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+}
+
+
+/* Tab land: 1200px */
+@media (max-width: 75em) {
+    .Grid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+/* Tab-port: 900px */
+@media (max-width: 56.25em) {
+    .Grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Phone-port: 550px */
+@media (max-width: 34.37em) {
+    .Grid {
+        grid-template-columns: 1fr;
+    }
+}

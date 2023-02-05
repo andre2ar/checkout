@@ -11,15 +11,35 @@ class Cart extends Model
 {
     use HasFactory, HasUuids;
 
-    protected $appends = ['total'];
+    protected $appends = ['gross_total', 'net_total', 'vat_total'];
 
     public $incrementing = false;
 
-    protected function total(): Attribute
+    protected function grossTotal(): Attribute
     {
         return Attribute::make(
             get: fn () => $this->products->reduce(function ($carry, $product) {
                 $carry += $product->item_total * $product->pivot->quantity;
+                return $carry;
+            }, 0),
+        );
+    }
+
+    protected function vatTotal(): Attribute
+    {
+        return Attribute::make(
+            get: fn () => $this->products->reduce(function ($carry, $product) {
+                $carry += $product->vat * $product->pivot->quantity;
+                return $carry;
+            }, 0),
+        );
+    }
+
+    protected function netTotal(): Attribute
+    {
+        return Attribute::make(
+            get: fn () => $this->products->reduce(function ($carry, $product) {
+                $carry += $product->price * $product->pivot->quantity;
                 return $carry;
             }, 0),
         );

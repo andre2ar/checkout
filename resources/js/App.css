@@ -1,0 +1,28 @@
+:root {
+    --white: #fff;
+
+    --primary-color: #0ACDFF;
+    --secondary-color: #00875f;
+
+    --background-color: #29292E;
+    --font-color: rgba(41, 41, 46, 0.96);
+
+    --color-darker: 85%;
+}
+
+:focus {
+    outline: transparent;
+    box-shadow: 0 0 0 2px var(--secondary-color);
+}
+
+body {
+    font-size: 1.6rem; /* 16px */
+    line-height: 1.7;
+    background-color: var(--background-color);
+    color: var(--white);
+}
+
+body, input, textarea, button {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+}

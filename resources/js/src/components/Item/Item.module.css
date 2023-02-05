@@ -1,0 +1,20 @@
+.Item {
+    display: flex;
+    flex: 1;
+    height: 20rem;
+    border-radius: 50px;
+    border: 1px solid var(--white);
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+}
+
+.Image img {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.Details {
+    margin-left: 1rem;
+}
