@@ -24,7 +24,7 @@ To run the migrations and also seed the database with some products is necessary
 
 Front-end application can be found accessing `localhost`. Might be necessary to install the front-end packages running:
 
-``./vendor/bin/sail npm install``
+``./vendor/bin/sail npm install`` and ``./vendor/bin/sail npm run dev``
 
 Once everything is install you should be ready to go.
 
